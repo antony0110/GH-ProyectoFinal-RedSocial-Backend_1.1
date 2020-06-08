@@ -55,10 +55,11 @@ class UserController extends Controller
     public function getUserInfo(Request $request)
     {
         $user = Auth::user();
+        return $user->load('post');
 //req.userx
 
         // $request->user();
-        return $user;
+        
     }
     public function uploadImage(Request $request)
     {
