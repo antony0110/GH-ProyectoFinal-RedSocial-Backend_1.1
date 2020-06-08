@@ -55,9 +55,24 @@ class UserController extends Controller
     public function getUserInfo(Request $request)
     {
         $user = Auth::user();
-//req.user
+//req.userx
 
         // $request->user();
         return $user;
+    }
+    public function uploadImage(Request $request)
+    {
+        try {
+            $request->validate(['img' => 'required|image']);
+            $user = Auth::user();
+            $imageName = time() . '-' . request()->img->getClientOriginalName();
+            request()->img->move('images/users', $imageName);
+            $user->update(['imagen' => $imageName]);
+            return response($user);
+        } catch (\Exception $e) {
+            return response([
+                'error' => $e,
+            ], 500);
+        }
     }
     }

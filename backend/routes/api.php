@@ -22,12 +22,14 @@ Route::prefix('users')->group(function () {
     Route::post('/login','UserController@login');
     Route::get('/logout','UserController@logout');
     Route::middleware('auth:api')->group(function (){
-        Route::get('/info', 'UserController@getUserInfo');
-       
+    Route::get('/info', 'UserController@getUserInfo');
+    Route::post('/image','UserController@uploadImage');
         });
 });
 Route::prefix('posts')->group(function () {
+    Route::middleware('auth:api')->group(function (){
 Route::post('/insert','PostController@insert');
+});
 Route::get('/getAll','PostController@GetAll');
 Route::get('/PostByUser','PostController@PostByUser');
 
