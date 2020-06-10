@@ -29,8 +29,9 @@ public function like($id, Request $request)
     }
     public function disLike($id, Request $request){
         $user_id = Auth::id();
-        $dislikes = DB::table('likeables')->where('user_id',$user_id)->where('likeable_id',$request->likeable_id)->delete();
+        $dislikes = DB::table('likeables')->where('user_id',$user_id)->where('likeable_id',$id)->delete();
          return response([
+             $dislikes,
              'message' => 'No me gusta'
          ],201);  
     }
