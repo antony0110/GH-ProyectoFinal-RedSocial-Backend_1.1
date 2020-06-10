@@ -45,10 +45,10 @@ _Y ahora os voy a mostrar como funciona el backend de la red social_
 ![](./FotosReadme/RelacionesLikes.png)<br>
 _Aqui tenemos todas las migraciones de las tablas_
 ## MIGRACIONES
-![](./FotosReadme/migraciones.png)
+![](./FotosReadme/migraciones.png)<br>
 _Aqui tenemos todas las migraciones de las tablas_
 ## RUTAS
-![](./FotosReadme/rutas.png)
+![](./FotosReadme/rutas.png)<br>
 y aqui podemos ver las rutas que hemos del posts y de los usuarios 
 
 ## Construido con 🛠️
