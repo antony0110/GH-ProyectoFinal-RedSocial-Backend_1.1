@@ -37,11 +37,11 @@ _Y ahora os voy a mostrar como funciona el backend de la red social_
 ![](./FotosReadme/tablas.PNG)
  _Estas son las tablas que tenemos que tener, las tablas que hemos generado con artisan son las de users, likeables, posts, las otras tablas se generan con el passport el cual nos hace el token del usuario y la autenticacion y nos la encripta(las relaciones no las muestra en el phpadmin pero las tenemos en cada modelo de la tabla)_
  ## RELACIONES
- ### Relaciones de la tabla de post
+ ### Relaciones de la tabla de post<br>
 ![](./FotosReadme/RelacionesPosts.png)<br>
- ### Relaciones de la tabla de user 
+ ### Relaciones de la tabla de user <br>
  ![](./FotosReadme/RelacionesUser.png)<br>
-  ### Relaciones de la tabla de likeables
+  ### Relaciones de la tabla de likeables <br>
 ![](./FotosReadme/RelacionesLikes.png)<br>
 _Aqui tenemos todas las migraciones de las tablas_
 ## MIGRACIONES
