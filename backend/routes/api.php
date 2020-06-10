@@ -27,10 +27,11 @@ Route::prefix('users')->group(function () {
         });
 });
 Route::prefix('posts')->group(function () {
-    Route::middleware('auth:api')->group(function (){
+Route::middleware('auth:api')->group(function (){
 Route::post('/insert','PostController@insert');
+Route::post('/like/{id}','LikeableController@like');
+Route::post('/dislike/{id}','LikeableController@dislike');
 });
 Route::get('/getAll','PostController@GetAll');
 Route::get('/PostByUser','PostController@PostByUser');
-
 });

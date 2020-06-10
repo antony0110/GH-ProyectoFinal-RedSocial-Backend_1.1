@@ -30,8 +30,8 @@ class PostController extends Controller
     public function GetAll(Request $request)
     {
         try {
-            $body = Post::with('user')->get();
-            return response($body, 201);
+            $body = Post::orderBy('id','DESC')->get();   
+            return response($body->load('user.post.likes','likes'), 201);
         } catch (\Exception $e) {
             return response([
                 'message' => 'There was an error trying to register the user',
